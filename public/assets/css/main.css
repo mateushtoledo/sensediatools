@@ -1,0 +1,12 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #482462 !important;
+}
+
+.content-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

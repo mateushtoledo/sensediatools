@@ -1,0 +1,9 @@
+.tool-icon {
+    height: 200px;
+    align-self: center;
+}
+
+.tool-title {
+    color: #482462;
+    font-weight: bold;
+}

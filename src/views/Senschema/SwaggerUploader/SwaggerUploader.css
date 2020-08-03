@@ -1,0 +1,11 @@
+.upload-icon {
+    width: 200px;
+}
+
+.file-dropzone {
+    border: 2px dashed #9da39e;
+}
+
+.file-dropzone:hover {
+    cursor: pointer;
+}

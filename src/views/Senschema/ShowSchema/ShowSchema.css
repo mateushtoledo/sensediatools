@@ -1,0 +1,10 @@
+.schema-content {
+    height: 350px;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    padding: 10px;
+    font-size: 12px !important;
+    margin-bottom: 20px;
+    background: white !important;
+    color: black !important;
+}

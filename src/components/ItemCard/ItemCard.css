@@ -1,0 +1,28 @@
+.badge-GET {
+    background-color: #61affe !important;
+}
+
+.badge-POST {
+    background-color: #49cc90 !important;
+}
+
+.badge-PUT {
+    background-color: #fca130 !important;
+}
+
+.badge-PATCH {
+    background-color: #50e3c2 !important;
+}
+
+.badge-DELETE {
+    background-color: #f93e3e !important;
+}
+
+.badge-OPTIONS {
+    background-color: #0d5aa7 !important;
+}
+
+.item-card:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
