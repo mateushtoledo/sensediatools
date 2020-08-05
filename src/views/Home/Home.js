@@ -17,7 +17,7 @@ function Home() {
                                 href="https://www.google.com/url?q=https://openapi-to-postman.herokuapp.com"
                                 target="_blank"
                                 icon="assets/img/pm-logo.png"
-                                toolName="Swagger to postman"
+                                toolName="Swagger 3 to postman"
                             />
                         </div>
 

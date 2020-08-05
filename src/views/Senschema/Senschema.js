@@ -68,8 +68,12 @@ function Senschema(props) {
     const createEndpointSchema = (targetEndpoint) => {
         SenschemaApi.get(`/swaggers/${swaggerId}/endpoints/${targetEndpoint}/schemas`)
             .then(response => {
-                setEndpointSchemas(response.data);
-                setActualScreen(SCREENS.SelectSchema);
+                if (response.data.request || response.data.responses) {
+                    setEndpointSchemas(response.data);
+                    setActualScreen(SCREENS.SelectSchema);
+                } else {
+                    showWarningMessage("The selected endpoint doesn't have request/responses with applicaton/json content!");
+                }
             })
             .catch(error => {
                 console.error(error);
