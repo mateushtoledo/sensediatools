@@ -12,3 +12,9 @@
 .sensedia-logo {
     max-width: 160px;
 }
+
+@media (max-width: 767px) {
+    .sensedia-logo {
+        margin-bottom: 20px;
+    }
+}
