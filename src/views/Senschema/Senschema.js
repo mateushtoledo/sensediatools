@@ -29,6 +29,8 @@ function Senschema(props) {
     const [swaggerId, setSwaggerId] = useState(null);
     const [endpoints, setEndpoints] = useState(null);
     const [endpointSchemas, setEndpointSchemas] = useState(null);
+    const [selectedSchemaType, setSelectedSchemaType] = useState("request");
+    const [responseCode, setResponseCode] = useState("request");
     const [selectedSchema, setSelectedSchema] = useState({});
     const [progress, setProgress] = useState(0);
 
@@ -101,8 +103,10 @@ function Senschema(props) {
         }
     };
 
-    const showJsonSchema = (schema) => {
+    const showJsonSchema = (schema, isRequest, responseCode = null) => {
         setSelectedSchema(schema);
+        setSelectedSchemaType(isRequest ? "request" : "response");
+        setResponseCode(responseCode);
         setActualScreen(SCREENS.ShowSchema);
     };
 
@@ -135,7 +139,7 @@ function Senschema(props) {
                         "SwaggerUploader": <SwaggerUploader saveSwagger={saveSwagger} />,
                         "SelectEndpoint": <SelectEndpoint endpoints={endpoints} createEndpointSchema={createEndpointSchema} />,
                         "SelectSchema": <SelectSchema schemas={endpointSchemas} showJsonSchema={showJsonSchema} />,
-                        "ShowSchema": <ShowSchema schema={selectedSchema} />
+                        "ShowSchema": <ShowSchema schema={selectedSchema} schemaOf={selectedSchemaType} responseCode={responseCode} />
                     }[actualScreen]
                 }
 

@@ -18,7 +18,7 @@ function SelectSchema(props) {
                     <div className="form-group">
                         <h5 className="font-weight-bold">Request schemas</h5>
                         <div className="row">
-                            <div className="form-group col-lg-3" onClick={ev => props.showJsonSchema(props.schemas.request)}>
+                            <div className="form-group col-lg-3" onClick={ev => props.showJsonSchema(props.schemas.request, true, null)}>
                                 <ItemCard
                                     badgeClass="badge badge-primary"
                                     badgeText="REQUEST"
@@ -39,7 +39,7 @@ function SelectSchema(props) {
                             {
                                 props.schemas.responses.map(function (response) {
                                     return (
-                                        <div className="form-group col-lg-3" onClick={ev => props.showJsonSchema(response.schema)}>
+                                        <div key={`card-to-http-${response.code}-code`} className="form-group col-lg-3" onClick={ev => props.showJsonSchema(response.schema, true, response.code)}>
                                             <ItemCard
                                                 badgeClass="badge badge-primary"
                                                 badgeText={`HTTP ${response.code} RESPONSE`}
